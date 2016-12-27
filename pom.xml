@@ -33,18 +33,19 @@
   </dependencies>
   
   <build>
-
-     <plugins>
-       <plugin>
-    		<groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-war-plugin</artifactId>
-	        <version>2.2</version>
-	        <configuration>
-	        	<warName>hello</warName> 
-	        </configuration>
-    	</plugin>
-
-     </plugins>
+   
+       <plugins>
+         <plugin>
+    	   <groupId>org.apache.tomcat.maven</groupId>
+   	   <artifactId>tomcat7-maven-plugin</artifactId>
+   	   <version>2.1</version>
+   	   <configuration>
+           <url>http://192.168.100.111:8080/manager/text</url>
+           <server>tomcat7</server> 
+           <path>/mavenProject</path> 
+           </configuration>
+         </plugin> 	
+       </plugins>
 
   </build>
 </project>
